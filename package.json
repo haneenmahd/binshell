@@ -1,0 +1,14 @@
+{
+  "name": "winshell",
+  "version": "1.0.0",
+  "description": "BinShell is a package for accessing Any OS Recycle Bin Directory",
+  "main": "index.js",
+  "scripts": {
+    "all": "npm run test && npm run compile",
+    "test": "node tests/test.js",
+    "compile": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
