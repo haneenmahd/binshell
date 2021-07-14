@@ -1,9 +1,11 @@
 const os = require("os");
 const fs = require("fs");
 
+const userName = os.userInfo().username;
+
 const BIN_PATH_WIN32 = "C://$Recycle.Bin/";
-const BIN_PATH_UNIX = "";
-const BIN_PATH_LINUX = "";
+const BIN_PATH_UNIX = `/home/${userName}/.local/share/Trash`;
+const BIN_PATH_LINUX = `/home/${userName}/.local/share/Trash`;
 
 /**
  * This function returns the path according to the Operating System
