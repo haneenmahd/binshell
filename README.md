@@ -1,5 +1,36 @@
 # BinShell
-BinShell is a package for accessing Any OS Recycle Bin Directory Natively from Node.js
+BinShell is a package for accessing Windows Recycle Bin Directory Natively from Node.js
 
+# Installation
+Using npm
+```sh
+npm install binshell
+```
+
+Using yarn
+```sh
+yarn add binshell
+```
 # Usage
-usage here!
+There are two main static functions inside the class `BinShell`.
+- `readBin` : reads the directory asynchronously (non-blocking)
+
+```js
+import BinShell from "binshell";
+
+BinShell.readBin((err, data) => {
+    for (const d in data) {
+        console.log(d);
+    }
+});
+```
+- `readBinSync` : reads the directory synchonously
+
+```js
+import BinShell from "binshell";
+
+const dir_content = BinShell.readBinSync();
+```
+
+# License
+BinShell is Licensed under Apache License Version 2.0
