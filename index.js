@@ -1,11 +1,7 @@
 const os = require("os");
 const fs = require("fs");
 
-const userName = os.userInfo().username;
-
 const BIN_PATH_WIN32 = "C://$Recycle.Bin/";
-const BIN_PATH_UNIX = `/${userName}/.local/share/Trash`;
-const BIN_PATH_LINUX = `/${userName}/.local/share/Trash`;
 
 /**
  * This function returns the path according to the Operating System
@@ -15,10 +11,6 @@ function getBinPath() {
     const platform = os.platform();
 
     switch(platform) {
-        case "unix":
-            return BIN_PATH_UNIX;
-        case "linux":
-            return BIN_PATH_LINUX;
         case "win32":
             return BIN_PATH_WIN32;
         default:
@@ -27,10 +19,15 @@ function getBinPath() {
 }
 
 class BinShell {
-    constructor() {
-
-    }
-
+    /**
+     * Reads the directory asynchronously
+     * @param {(err: Error, data: string[])} callback 
+     * @param {{
+     *  encoding: BufferEncoding,
+     *  withFileTypes?: false
+     * } | BufferEncoding} options 
+     * @returns {void}
+     */
     static readBin(callback, options) {
         const asyncData = fs.readdir(getBinPath(), options || {
             encoding: "utf-8"
@@ -41,6 +38,14 @@ class BinShell {
         return asyncData;
     }
 
+    /**
+     * 
+     * @param {{
+     *  encoding: BufferEncoding,
+     *  withFileTypes?: false
+     * } | BufferEncoding} options 
+     * @returns 
+     */
     static readBinSync(options) {
         const syncData = fs.readdirSync(getBinPath(), options || "utf-8");
 
