@@ -51,6 +51,13 @@ class BinShell {
 
         return syncData;
     }
+
+    /**
+     * @returns {string} The path to Recycle bin
+     */
+    get binPath() {
+        return getBinPath();
+    }
 }
 
 module.exports = BinShell;
