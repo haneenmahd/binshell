@@ -32,5 +32,8 @@ import BinShell from "binshell";
 const dir_content = BinShell.readBinSync();
 ```
 
+It also have a getter to get the Bin Path.
+- `binPath`: returns a string to the recycle bin path
+
 # License
 BinShell is Licensed under Apache License Version 2.0
