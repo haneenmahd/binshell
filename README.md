@@ -29,7 +29,9 @@ BinShell.readBin((err, data) => {
 ```js
 import BinShell from "binshell";
 
-const dir_content = BinShell.readBinSync();
+const binContent = BinShell.readBinSync();
+
+console.log(binContent);
 ```
 
 It also have a getter to get the Bin Path.
