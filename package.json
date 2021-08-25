@@ -8,7 +8,11 @@
     "test": "node tests/test.js",
     "compile": "node index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "recycle-bin",
+    "windows",
+    "win32"
+  ],
   "author": "",
   "license": "ISC",
   "os": [
