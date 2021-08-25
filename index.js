@@ -21,7 +21,7 @@ function getBinPath() {
 class BinShell {
     /**
      * Reads the directory asynchronously
-     * @param {(err: Error, data: string[])} callback 
+     * @param {(err: Error, data: string[]) => void} callback 
      * @param {{
      *  encoding: BufferEncoding,
      *  withFileTypes?: false
