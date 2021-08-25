@@ -38,7 +38,7 @@ It also have a getter to get the Bin Path.
 - `binPath`: returns a string to the recycle bin path
 
 # Contributing
-Open this project in gitpod. [Open](https://gitpod.io/#https://github.com/haneenmahd/binshel)
+[Open](https://gitpod.io/#https://github.com/haneenmahd/binshell) this project in gitpod. <br>
 Feel free to contribute to this project.
 
 # License
