@@ -37,5 +37,9 @@ console.log(binContent);
 It also have a getter to get the Bin Path.
 - `binPath`: returns a string to the recycle bin path
 
+# Contributing
+Open this project in gitpod. [Open](https://gitpod.io/#https://github.com/haneenmahd/binshel)
+Feel free to contribute to this project.
+
 # License
 BinShell is Licensed under Apache License Version 2.0
