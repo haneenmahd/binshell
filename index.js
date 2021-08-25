@@ -1,5 +1,6 @@
 const os = require("os");
 const fs = require("fs");
+const path = require("path");
 
 const BIN_PATH_WIN32 = "C://$Recycle.Bin/";
 
@@ -36,6 +37,13 @@ class BinShell {
         });
 
         return asyncData;
+    }
+    
+    /**
+    * Cleans the Recycle Bin
+    */
+    static cleanBin() {
+        // TODO:
     }
 
     /**
